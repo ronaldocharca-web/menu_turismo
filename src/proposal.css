@@ -1,2 +1,52 @@
 /* El estilo principal vive en neo.css.
    Este archivo queda únicamente como punto de extensión para cambios futuros. */
+.modal.access-modal h2,.modal.user-editor h2{color:#0b1520}
+.modal.access-modal .eyebrow,.modal.user-editor .eyebrow{color:#526b61}
+.modal.access-modal .modal-intro{color:#53655d}
+.modal.access-modal label,.modal.user-editor label{color:#17221d}
+.modal.user-editor .permission-fieldset{border-color:#111827;background:#eef3f0}
+.modal.user-editor .permission-option{background:#fff;border-color:#b7c3bc}
+.modal.user-editor .permission-option strong{color:#17221d}
+.modal.user-editor .permission-option small{color:#66766e}
+.modal.user-editor form>label>span{color:#66766e}
+
+/* Cabecera: acceso visible para visitantes y administración solo para administradores */
+.top-actions .login-entry{display:flex;align-items:center;gap:7px;background:#f5f7f6!important;color:#111827!important;border:2px solid #111827!important;box-shadow:4px 4px 0 #d9ff43!important}
+.top-actions .login-entry:hover{background:#d9ff43!important;transform:translate(-1px,-1px)}
+.sidebar-login-button{background:#d9ff43!important;color:#111827!important;border:2px solid #111827!important;box-shadow:4px 4px 0 #000!important}
+
+/* Panel de usuarios: contraste alto y textos siempre legibles */
+.admin-page{min-height:100vh;background:#09100c!important;color:#eef7f0}
+.admin-page-header{background:#050706!important;border-bottom:2px solid #2f3b34!important}
+.access-admin-content{width:min(1180px,calc(100% - 36px));margin:0 auto;padding:48px 0 70px}
+.access-admin-content .admin-title-row h1{color:#f3faf5!important;font:800 36px Manrope;margin:8px 0}
+.access-admin-content .admin-title-row p{color:#a7b6ad!important;font-size:14px}
+.access-admin-content .permission-summary{background:#151d17!important;color:#d9ff43!important;border:2px solid #34452d!important;box-shadow:5px 5px 0 #000}
+.access-admin-content .permission-summary span{color:#b4c2ba!important}
+.access-admin-content .members-table{background:#111713!important;border:2px solid #303c35!important;box-shadow:7px 7px 0 #000!important}
+.access-admin-content .member-heading{background:#1b241e!important;color:#d9ff43!important}
+.access-admin-content .member-row{color:#dce7df!important;border-color:#303c35!important}
+.access-admin-content .member-name strong{color:#fff!important}
+.access-admin-content .member-name small{color:#99a99f!important}
+.access-admin-content .status{font-weight:800}
+
+.modal.user-editor{background:#f4f7f5!important;color:#17221d!important;border:3px solid #0b1110!important;box-shadow:9px 9px 0 #000!important}
+.modal.user-editor h2{color:#0b1110!important;font-size:25px}
+.modal.user-editor .eyebrow{color:#53675d!important}
+.modal.user-editor .close-button{color:#17221d!important}
+.modal.user-editor label,.modal.user-editor legend{color:#17221d!important}
+.modal.user-editor input,.modal.user-editor select,.modal.user-editor textarea{background:#fff!important;color:#111827!important;border:2px solid #111827!important;-webkit-text-fill-color:#111827!important}
+.modal.user-editor input::placeholder{color:#7a8780!important;-webkit-text-fill-color:#7a8780!important}
+.modal.user-editor input:focus,.modal.user-editor select:focus{border-color:#637718!important;box-shadow:0 0 0 4px rgba(217,255,67,.45)!important}
+.modal.user-editor .permission-fieldset{border:2px solid #111827!important;background:#e5ece8!important}
+.modal.user-editor .permission-option{background:#fff!important;border:2px solid #bdc8c1!important}
+.modal.user-editor .permission-option:has(input:checked){background:#efffc0!important;border-color:#5d7016!important}
+.modal.user-editor .permission-option strong{color:#111827!important}
+.modal.user-editor .permission-option small,.modal.user-editor form>label>span{color:#55645c!important}
+.modal.user-editor .secondary-button{background:#fff!important;color:#111827!important;border:2px solid #111827!important}
+.modal.user-editor .primary-button{background:#d9ff43!important;color:#111827!important;border:2px solid #111827!important;box-shadow:4px 4px 0 #111827!important}
+
+@media(max-width:720px){
+  .access-admin-content{width:min(100% - 24px,1180px);padding:28px 0 50px}
+  .access-admin-content .admin-title-row h1{font-size:29px}
+}
