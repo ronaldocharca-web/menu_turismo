@@ -10,6 +10,66 @@
 .modal.user-editor .permission-option small{color:#66766e}
 .modal.user-editor form>label>span{color:#66766e}
 
+/* Contraste de los formularios para crear y editar enlaces. */
+.modal.link-editor{
+  background:#edf2f8!important;
+  color:#111827!important;
+  border:3px solid #0b1220!important;
+  box-shadow:9px 9px 0 #07101f!important;
+}
+.modal.link-editor h2{
+  color:#111827!important;
+  background:none!important;
+  -webkit-text-fill-color:#111827!important;
+  text-shadow:none!important;
+}
+.modal.link-editor .eyebrow{color:#526b61!important}
+.modal.link-editor .close-button{color:#52615a!important}
+.modal.link-editor label{color:#26332c!important}
+.modal.link-editor label>span{color:#65746d!important}
+.modal.link-editor input,
+.modal.link-editor textarea,
+.modal.link-editor select{
+  background:#fff!important;
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  caret-color:#111827!important;
+  border:2px solid #111827!important;
+}
+.modal.link-editor input::placeholder,
+.modal.link-editor textarea::placeholder{
+  color:#68756f!important;
+  -webkit-text-fill-color:#68756f!important;
+  opacity:1!important;
+}
+.modal.link-editor input:focus,
+.modal.link-editor textarea:focus,
+.modal.link-editor select:focus{
+  border-color:#0e7490!important;
+  box-shadow:0 0 0 3px rgba(14,116,144,.2)!important;
+}
+.modal.link-editor option{background:#fff;color:#111827}
+.modal.link-editor .secondary-button{background:#fff!important;color:#111827!important;border:2px solid #111827!important}
+.modal.link-editor .primary-button{background:#d99114!important;color:#fff!important;border:2px solid #111827!important}
+
+/* El texto escrito en el buscador debe conservar contraste en el tema oscuro. */
+.toolbar .search-box{
+  background:#fff!important;
+  color:#52615a!important;
+}
+.toolbar .search-box input{
+  background:#fff!important;
+  color:#111827!important;
+  -webkit-text-fill-color:#111827!important;
+  caret-color:#111827!important;
+  opacity:1!important;
+}
+.toolbar .search-box input::placeholder{
+  color:#667085!important;
+  -webkit-text-fill-color:#667085!important;
+  opacity:1!important;
+}
+
 /* Cabecera: acceso visible para visitantes y administración solo para administradores */
 .top-actions .login-entry{display:flex;align-items:center;gap:7px;background:#f5f7f6!important;color:#111827!important;border:2px solid #111827!important;box-shadow:4px 4px 0 #d9ff43!important}
 .top-actions .login-entry:hover{background:#d9ff43!important;transform:translate(-1px,-1px)}
