@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react'
-import { ArrowLeft, Check, CheckCircle2, ExternalLink, Folder, KeyRound, LayoutGrid, Link2, LockKeyhole, LogOut, Menu, Pencil, Plus, Search, ShieldCheck, Tag, Trash2, UserPlus, Users, X } from 'lucide-react'
+import { ArrowLeft, Check, CheckCircle2, Folder, KeyRound, LayoutGrid, Link2, LockKeyhole, LogOut, Menu, Pencil, Plus, Search, ShieldCheck, Tag, Trash2, UserPlus, Users, X } from 'lucide-react'
 import type { Session } from '@supabase/supabase-js'
 import { supabase } from './services/supabase'
 
@@ -296,7 +296,7 @@ function App() {
         <div className="link-grid">
           {visibleLinks.map((link) => <article className="link-card" key={link.id}>
             <div className="card-top"><div className="site-icon">{link.title.charAt(0)}</div><div className="card-actions"><span className={'access-indicator ' + (canOpen(link) ? 'allowed' : '')}>{canOpen(link) ? <CheckCircle2 size={18} /> : <LockKeyhole size={18} />}</span>{profile?.role === 'admin' && <button className="more-button" onClick={() => setLinkEditor(link)}>•••</button>}</div></div>
-            <div className="card-body"><h2>{link.title}</h2><button className="domain protected-link" onClick={() => void requestLink(link)}>{link.displayHost}<ExternalLink size={13} /></button><p>{link.description}</p></div>
+            <div className="card-body"><h2>{link.title}</h2><button className="domain protected-link" aria-label={`Ingresar a ${link.title}`} onClick={() => void requestLink(link)}>Ingresar al módulo</button><p>{link.description}</p></div>
             <div className="card-footer"><span className="tag"><Tag size={12} /> {link.category}</span><span className="author"><LockKeyhole size={12} /> Acceso protegido</span></div>
             {profile?.role === 'admin' && <div className="card-hover-actions"><button onClick={() => setLinkEditor(link)}>Editar</button><button onClick={() => void deleteLink(link.id)}><Trash2 size={14} /></button></div>}
           </article>)}
