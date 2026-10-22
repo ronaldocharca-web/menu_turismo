@@ -262,7 +262,7 @@ function App() {
 
   return <div className="app-shell">
     <header className="topbar">
-      <img className="institution-logo logo-left" src="/logos/unidad-sistemas-turismo.png" alt="Unidad de Sistemas - Carrera de Turismo" />
+      <img className="institution-logo logo-left" src="/logos/unidad-sistemas-turismo-header-v2.png" alt="Unidad de Sistemas - Carrera de Turismo" />
       <Brand />
       <img className="institution-logo logo-right" src="/logos/turismo.png" alt="Turismo" />
       <button className="mobile-toggle" onClick={() => setMobileMenu(!mobileMenu)} aria-label="Abrir menú"><Menu /></button>

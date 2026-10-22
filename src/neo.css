@@ -11,7 +11,7 @@
 
 body { background: #090f17; color: var(--nb-ink); }
 .app-shell { position:relative; isolation:isolate; padding: 24px; min-height: 100vh; background: #101925; background-image: linear-gradient(rgba(2,6,12,.42) 2px,transparent 2px),linear-gradient(90deg,rgba(2,6,12,.42) 2px,transparent 2px); background-size: 28px 28px; color: var(--nb-ink); }
-.app-shell::before { content:""; position:fixed; z-index:0; pointer-events:none; inset:16vh 12vw 10vh; background:url('/logos/turismo-transparent.png') 82% 58% / min(34vw,430px) auto no-repeat; opacity:.10; mix-blend-mode:screen; filter:saturate(1.15) contrast(1.1); transform:rotate(-7deg); }
+.app-shell::before { content:""; position:fixed; z-index:0; pointer-events:none; inset:16vh 12vw 10vh; background:url('/logos/turismo-header-v2.png') 82% 58% / min(34vw,430px) auto no-repeat; opacity:.10; mix-blend-mode:screen; filter:saturate(1.15) contrast(1.1); transform:rotate(-7deg); }
 .app-shell > * { position:relative; z-index:1; }
 .topbar { height: 144px; max-width: 1480px; margin:auto; padding:0 28px; gap:18px; background:#0b1220; border:var(--nb-border); border-radius:20px 20px 0 0; box-shadow:8px 8px 0 var(--nb-ink); }
 .layout { max-width:1480px; min-height:calc(100vh - 168px); margin:auto; background:#101a27; border:var(--nb-border); border-top:0; border-radius:0 0 20px 20px; box-shadow:8px 8px 0 var(--nb-ink); overflow:hidden; }
@@ -20,8 +20,8 @@ body { background: #090f17; color: var(--nb-ink); }
 .brand-accent { color:#78c7c3; }
 .brand-mark { background:#78c7c3; color:var(--nb-ink); border:var(--nb-border); border-radius:10px; box-shadow:4px 4px 0 #020611; }
 .institution-logo { display:block; flex:none; object-fit:contain; background:transparent; border:0; }
-.logo-left { width:430px; height:128px; padding:2px; content:url('/logos/unidad-sistemas-turismo-transparent.png'); }
-.logo-right { width:190px; height:128px; padding:2px; margin-left:auto; content:url('/logos/turismo-transparent.png'); }
+.logo-left { width:430px; height:128px; padding:2px; content:url('/logos/unidad-sistemas-turismo-header-v2.png'); }
+.logo-right { width:190px; height:128px; padding:2px; margin-left:auto; content:url('/logos/turismo-header-v2.png'); }
 .content-header { padding:29px 31px; min-height:174px; background:#0c1928; color:#fff; border:var(--nb-border); border-radius:17px; box-shadow:7px 7px 0 var(--nb-ink); }
 .content h1 { color:var(--nb-ink); background:none; -webkit-text-fill-color:initial; text-shadow:3px 3px #fff; font-weight:900; }
 .content-header h1 { color:#fff; text-shadow:3px 3px #07101e; }
