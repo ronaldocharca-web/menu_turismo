@@ -36,13 +36,15 @@ body { background: #090f17; color: var(--nb-ink); }
 .stat-icon.green { background:#78908e; color:var(--nb-ink); }.stat-icon.yellow { background:#917d58; color:#171109; }.stat-icon.blue { background:#718398; color:var(--nb-ink); }
 .toolbar { background:#09111b; border:var(--nb-border); border-radius:13px; box-shadow:5px 5px 0 var(--nb-ink); }
 .search-box { background:#050b12; border:2px solid #02050a; border-radius:7px; box-shadow:3px 3px 0 var(--nb-ink); color:#aab8c7; }
-.link-card { background:var(--nb-paper); border:var(--nb-border); border-radius:13px; box-shadow:7px 7px 0 var(--nb-ink); min-height:287px; }
+.link-card { background:var(--nb-paper); border:var(--nb-border); border-radius:13px; box-shadow:7px 7px 0 var(--nb-ink); min-height:230px; }
 .link-card:nth-child(3n+1) { background:#123133; }.link-card:nth-child(3n+2) { background:#1b2e45; }.link-card:nth-child(3n) { background:#292833; }
 .link-card:hover { transform:translate(-3px,-3px); box-shadow:10px 10px 0 var(--nb-ink); }
 .link-card:before,.link-card:after { display:none; }
 .site-icon { background:#aeb8c3!important; color:var(--nb-ink); border:var(--nb-border); border-radius:9px; box-shadow:4px 4px 0 var(--nb-ink); }
 .card-body h2 { color:#f7fbff; font-weight:900; }.card-body p { color:#d7e2ee; font-weight:600; }
 .domain { background:#aeb8c3; color:var(--nb-ink); border:2px solid var(--nb-ink); border-radius:7px; box-shadow:3px 3px 0 var(--nb-ink); font-weight:900; }.domain:hover { background:#c2cad3; color:var(--nb-ink); }
+.module-button-area { display:flex; align-items:center; justify-content:center; padding:18px 0; }
+.module-entry-button { width:100%; min-height:64px; justify-content:center; text-align:center; white-space:normal; line-height:1.3; font-size:14px; text-transform:uppercase; }
 .card-footer { border-color:var(--nb-ink); }.tag { background:#9faab5; color:var(--nb-ink); border:2px solid var(--nb-ink); border-radius:5px; font-weight:800; }.author { color:#cbd5df; }
 .content,.link-grid,.link-card,.card-body { min-width:0; }.link-card { width:100%; overflow:hidden; }.card-body h2,.card-body p { overflow-wrap:anywhere; }.card-footer { flex-wrap:wrap; }.author { min-width:0; white-space:normal; }
 .card-hover-actions { right:14px; bottom:13px; gap:6px; padding:6px; background:var(--nb-ink); border:2px solid var(--nb-ink); border-radius:8px; box-shadow:4px 4px 0 rgba(11,18,32,.35); }
