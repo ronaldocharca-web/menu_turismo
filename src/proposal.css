@@ -12,34 +12,34 @@
 
 /* Contraste de los formularios para crear y editar enlaces. */
 .modal.link-editor{
-  background:#edf2f8!important;
-  color:#111827!important;
+  background:#151f2b!important;
+  color:#eef3f8!important;
   border:3px solid #0b1220!important;
   box-shadow:9px 9px 0 #07101f!important;
 }
 .modal.link-editor h2{
-  color:#111827!important;
+  color:#f2f5f8!important;
   background:none!important;
-  -webkit-text-fill-color:#111827!important;
+  -webkit-text-fill-color:#f2f5f8!important;
   text-shadow:none!important;
 }
-.modal.link-editor .eyebrow{color:#526b61!important}
-.modal.link-editor .close-button{color:#52615a!important}
-.modal.link-editor label{color:#26332c!important}
-.modal.link-editor label>span{color:#65746d!important}
+.modal.link-editor .eyebrow{color:#9eacba!important}
+.modal.link-editor .close-button{color:#aab6c2!important}
+.modal.link-editor label{color:#d8e0e7!important}
+.modal.link-editor label>span{color:#8f9daa!important}
 .modal.link-editor input,
 .modal.link-editor textarea,
 .modal.link-editor select{
-  background:#fff!important;
-  color:#111827!important;
-  -webkit-text-fill-color:#111827!important;
-  caret-color:#111827!important;
+  background:#080f18!important;
+  color:#eef3f8!important;
+  -webkit-text-fill-color:#eef3f8!important;
+  caret-color:#eef3f8!important;
   border:2px solid #111827!important;
 }
 .modal.link-editor input::placeholder,
 .modal.link-editor textarea::placeholder{
-  color:#68756f!important;
-  -webkit-text-fill-color:#68756f!important;
+  color:#83909d!important;
+  -webkit-text-fill-color:#83909d!important;
   opacity:1!important;
 }
 .modal.link-editor input:focus,
@@ -48,32 +48,32 @@
   border-color:#0e7490!important;
   box-shadow:0 0 0 3px rgba(14,116,144,.2)!important;
 }
-.modal.link-editor option{background:#fff;color:#111827}
-.modal.link-editor .secondary-button{background:#fff!important;color:#111827!important;border:2px solid #111827!important}
-.modal.link-editor .primary-button{background:#d99114!important;color:#fff!important;border:2px solid #111827!important}
+.modal.link-editor option{background:#080f18;color:#eef3f8}
+.modal.link-editor .secondary-button{background:#293544!important;color:#eef3f8!important;border:2px solid #070b12!important}
+.modal.link-editor .primary-button{background:#624720!important;color:#fff!important;border:2px solid #070b12!important}
 
 /* El texto escrito en el buscador debe conservar contraste en el tema oscuro. */
 .toolbar .search-box{
-  background:#fff!important;
-  color:#52615a!important;
+  background:#050b12!important;
+  color:#a9b7c6!important;
 }
 .toolbar .search-box input{
-  background:#fff!important;
-  color:#111827!important;
-  -webkit-text-fill-color:#111827!important;
-  caret-color:#111827!important;
+  background:#050b12!important;
+  color:#eef3f8!important;
+  -webkit-text-fill-color:#eef3f8!important;
+  caret-color:#eef3f8!important;
   opacity:1!important;
 }
 .toolbar .search-box input::placeholder{
-  color:#667085!important;
-  -webkit-text-fill-color:#667085!important;
+  color:#8391a1!important;
+  -webkit-text-fill-color:#8391a1!important;
   opacity:1!important;
 }
 
 /* Cabecera: acceso visible para visitantes y administración solo para administradores */
-.top-actions .login-entry{display:flex;align-items:center;gap:7px;background:#f5f7f6!important;color:#111827!important;border:2px solid #111827!important;box-shadow:4px 4px 0 #d9ff43!important}
-.top-actions .login-entry:hover{background:#d9ff43!important;transform:translate(-1px,-1px)}
-.sidebar-login-button{background:#d9ff43!important;color:#111827!important;border:2px solid #111827!important;box-shadow:4px 4px 0 #000!important}
+.top-actions .login-entry{display:flex;align-items:center;gap:7px;background:#1a2634!important;color:#edf2f7!important;border:2px solid #050911!important;box-shadow:4px 4px 0 #000!important}
+.top-actions .login-entry:hover{background:#263647!important;transform:translate(-1px,-1px)}
+.sidebar-login-button{background:#1c2b3a!important;color:#edf2f7!important;border:2px solid #050911!important;box-shadow:4px 4px 0 #000!important}
 
 /* Panel de usuarios: contraste alto y textos siempre legibles */
 .admin-page{min-height:100vh;background:#09100c!important;color:#eef7f0}
@@ -81,30 +81,40 @@
 .access-admin-content{width:min(1180px,calc(100% - 36px));margin:0 auto;padding:48px 0 70px}
 .access-admin-content .admin-title-row h1{color:#f3faf5!important;font:800 36px Manrope;margin:8px 0}
 .access-admin-content .admin-title-row p{color:#a7b6ad!important;font-size:14px}
-.access-admin-content .permission-summary{background:#151d17!important;color:#d9ff43!important;border:2px solid #34452d!important;box-shadow:5px 5px 0 #000}
+.access-admin-content .permission-summary{background:#17202c!important;color:#b9c8d6!important;border:2px solid #394858!important;box-shadow:5px 5px 0 #000}
 .access-admin-content .permission-summary span{color:#b4c2ba!important}
 .access-admin-content .members-table{background:#111713!important;border:2px solid #303c35!important;box-shadow:7px 7px 0 #000!important}
-.access-admin-content .member-heading{background:#1b241e!important;color:#d9ff43!important}
+.access-admin-content .member-heading{background:#1b2532!important;color:#c4d0dc!important}
 .access-admin-content .member-row{color:#dce7df!important;border-color:#303c35!important}
 .access-admin-content .member-name strong{color:#fff!important}
 .access-admin-content .member-name small{color:#99a99f!important}
 .access-admin-content .status{font-weight:800}
 
-.modal.user-editor{background:#f4f7f5!important;color:#17221d!important;border:3px solid #0b1110!important;box-shadow:9px 9px 0 #000!important}
-.modal.user-editor h2{color:#0b1110!important;font-size:25px}
-.modal.user-editor .eyebrow{color:#53675d!important}
-.modal.user-editor .close-button{color:#17221d!important}
-.modal.user-editor label,.modal.user-editor legend{color:#17221d!important}
-.modal.user-editor input,.modal.user-editor select,.modal.user-editor textarea{background:#fff!important;color:#111827!important;border:2px solid #111827!important;-webkit-text-fill-color:#111827!important}
-.modal.user-editor input::placeholder{color:#7a8780!important;-webkit-text-fill-color:#7a8780!important}
-.modal.user-editor input:focus,.modal.user-editor select:focus{border-color:#637718!important;box-shadow:0 0 0 4px rgba(217,255,67,.45)!important}
-.modal.user-editor .permission-fieldset{border:2px solid #111827!important;background:#e5ece8!important}
-.modal.user-editor .permission-option{background:#fff!important;border:2px solid #bdc8c1!important}
-.modal.user-editor .permission-option:has(input:checked){background:#efffc0!important;border-color:#5d7016!important}
-.modal.user-editor .permission-option strong{color:#111827!important}
-.modal.user-editor .permission-option small,.modal.user-editor form>label>span{color:#55645c!important}
-.modal.user-editor .secondary-button{background:#fff!important;color:#111827!important;border:2px solid #111827!important}
-.modal.user-editor .primary-button{background:#d9ff43!important;color:#111827!important;border:2px solid #111827!important;box-shadow:4px 4px 0 #111827!important}
+.modal.user-editor{background:#151f2b!important;color:#eef3f8!important;border:3px solid #050911!important;box-shadow:9px 9px 0 #000!important}
+.modal.user-editor h2{color:#f2f5f8!important;font-size:25px}
+.modal.user-editor .eyebrow{color:#9eacba!important}
+.modal.user-editor .close-button{color:#aab6c2!important}
+.modal.user-editor label,.modal.user-editor legend{color:#d8e0e7!important}
+.modal.user-editor input,.modal.user-editor select,.modal.user-editor textarea{background:#080f18!important;color:#eef3f8!important;border:2px solid #050911!important;-webkit-text-fill-color:#eef3f8!important}
+.modal.user-editor input::placeholder{color:#83909d!important;-webkit-text-fill-color:#83909d!important}
+.modal.user-editor input:focus,.modal.user-editor select:focus{border-color:#4f647b!important;box-shadow:0 0 0 4px rgba(79,100,123,.25)!important}
+.modal.user-editor .permission-fieldset{border:2px solid #050911!important;background:#0c141f!important}
+.modal.user-editor .permission-option{background:#131d29!important;border:2px solid #334153!important}
+.modal.user-editor .permission-option:has(input:checked){background:#213246!important;border-color:#63788e!important}
+.modal.user-editor .permission-option strong{color:#eef3f8!important}
+.modal.user-editor .permission-option small,.modal.user-editor form>label>span{color:#94a2af!important}
+.modal.user-editor .secondary-button{background:#293544!important;color:#eef3f8!important;border:2px solid #050911!important}
+.modal.user-editor .primary-button{background:#354b62!important;color:#fff!important;border:2px solid #050911!important;box-shadow:4px 4px 0 #050911!important}
+
+/* Inicio de sesión y avisos también usan el tema oscuro. */
+.modal.access-modal{background:#151f2b!important;color:#eef3f8!important;border:3px solid #050911!important;box-shadow:9px 9px 0 #000!important}
+.modal.access-modal h2{color:#f2f5f8!important}
+.modal.access-modal .eyebrow{color:#9eacba!important}
+.modal.access-modal .modal-intro{color:#aab6c2!important}
+.modal.access-modal label{color:#d8e0e7!important}
+.modal.access-modal input{background:#080f18!important;color:#eef3f8!important;border:2px solid #050911!important;-webkit-text-fill-color:#eef3f8!important}
+.modal.access-modal input::placeholder{color:#83909d!important;-webkit-text-fill-color:#83909d!important}
+.modal.access-modal .secondary-button{background:#293544!important;color:#eef3f8!important;border:2px solid #050911!important}
 
 @media(max-width:720px){
   .access-admin-content{width:min(100% - 24px,1180px);padding:28px 0 50px}
