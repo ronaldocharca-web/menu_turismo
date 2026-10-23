@@ -1,5 +1,5 @@
 import { FormEvent, useEffect, useMemo, useState } from 'react'
-import { ArrowLeft, Check, CheckCircle2, Folder, KeyRound, LayoutGrid, Link2, LockKeyhole, LogOut, Menu, Pencil, Plus, Search, ShieldCheck, Tag, Trash2, UserPlus, Users, X } from 'lucide-react'
+import { ArrowLeft, BriefcaseBusiness, Check, CheckCircle2, ClipboardCheck, FileSpreadsheet, Folder, FolderKanban, KeyRound, LayoutGrid, Link2, LockKeyhole, LogOut, Menu, Pencil, Plus, Search, ShieldCheck, Tag, Trash2, UserPlus, Users, Wrench, X } from 'lucide-react'
 import type { Session } from '@supabase/supabase-js'
 import { supabase } from './services/supabase'
 
@@ -285,7 +285,7 @@ function App() {
         {profile?.role === 'admin' && <div className="sidebar-bottom"><button className="admin-entry sidebar-admin-button" onClick={() => void openAdmin()}><ShieldCheck size={17} /> Administrar usuarios</button></div>}
       </aside>
       <main className="content">
-        <div className="content-header"><div><div className="eyebrow"><Folder size={15} /> Espacio compartido</div><h1>Directorio de enlaces</h1><p>Todos pueden ver los enlaces. Para abrirlos necesitas una cuenta autorizada.</p></div>{profile?.role === 'admin' && <button className="primary-button" onClick={() => setLinkEditor('new')}><Plus size={18} /> Agregar enlace</button>}</div>
+        <div className="content-header"><div className="content-header-copy"><div className="eyebrow"><Folder size={15} /> Espacio compartido</div><h1>Directorio de enlaces</h1><p>Todos pueden ver los enlaces. Para abrirlos necesitas una cuenta autorizada.</p></div>{profile?.role === 'admin' && <div className="content-header-action"><button className="primary-button" onClick={() => setLinkEditor('new')}><Plus size={18} /> Agregar enlace</button></div>}</div>
         <section className="stats-row">
           <Stat icon={<Link2 size={19} />} color="green" label="Total de enlaces" value={links.length} />
           <Stat icon={<LockKeyhole size={19} />} color="yellow" label="Categorías permitidas" value={profile?.role === 'admin' ? categories.length : permissions.length} />
@@ -295,7 +295,7 @@ function App() {
         <div className="results-line"><span>{visibleLinks.length} enlaces encontrados</span><span>Acceso por usuario</span></div>
         <div className="link-grid">
           {visibleLinks.map((link) => <article className="link-card" key={link.id}>
-            <div className="card-top"><div className="site-icon">{link.title.charAt(0)}</div><div className="card-actions"><span className={'access-indicator ' + (canOpen(link) ? 'allowed' : '')}>{canOpen(link) ? <CheckCircle2 size={18} /> : <LockKeyhole size={18} />}</span>{profile?.role === 'admin' && <button className="more-button" onClick={() => setLinkEditor(link)}>•••</button>}</div></div>
+            <div className="card-top"><div className="site-icon module-icon"><ModuleIcon link={link} /></div><div className="card-actions"><span className={'access-indicator ' + (canOpen(link) ? 'allowed' : '')}>{canOpen(link) ? <CheckCircle2 size={18} /> : <LockKeyhole size={18} />}</span>{profile?.role === 'admin' && <button className="more-button" onClick={() => setLinkEditor(link)}>•••</button>}</div></div>
             <div className="card-body module-button-area"><h2 className="module-title">{link.title}</h2><button className="domain protected-link module-entry-button" aria-label={`Ingresar a ${link.title}`} onClick={() => void requestLink(link)}>Ingresar al módulo</button></div>
             <div className="card-footer"><span className="tag"><Tag size={12} /> {link.category}</span><span className="author"><LockKeyhole size={12} /> Acceso protegido</span></div>
             {profile?.role === 'admin' && <div className="card-hover-actions"><button onClick={() => setLinkEditor(link)}>Editar</button><button onClick={() => void deleteLink(link.id)}><Trash2 size={14} /></button></div>}
@@ -314,6 +314,15 @@ function App() {
 
 function Brand() { return <div className="brand"><span className="brand-mark"><Link2 size={20} /></span><span>Turismo<span className="brand-accent"> Conecta</span></span></div> }
 function Stat({ icon, color, label, value }: { icon: React.ReactNode; color: string; label: string; value: number }) { return <div className="stat-card"><div className={'stat-icon ' + color}>{icon}</div><div><span>{label}</span><strong>{value}</strong></div></div> }
+function ModuleIcon({ link }: { link: LinkItem }) {
+  const source = `${link.title} ${link.category}`.toLowerCase()
+  if (source.includes('lista') || source.includes('csv') || source.includes('reporte')) return <FileSpreadsheet size={22} strokeWidth={1.8} />
+  if (source.includes('acta') || source.includes('document')) return <ClipboardCheck size={22} strokeWidth={1.8} />
+  if (source.includes('manten') || source.includes('herramient')) return <Wrench size={22} strokeWidth={1.8} />
+  if (source.includes('proyecto') || source.includes('sistema')) return <FolderKanban size={22} strokeWidth={1.8} />
+  if (source.includes('turismo') || source.includes('servicio')) return <BriefcaseBusiness size={22} strokeWidth={1.8} />
+  return <LayoutGrid size={22} strokeWidth={1.8} />
+}
 
 function AccessModal({ mode, target, onClose, onAuthenticated }: { mode: AccessMode; target: LinkItem | null; onClose: () => void; onAuthenticated: (session: Session, mode: AccessMode) => Promise<void> }) {
   const [username, setUsername] = useState('')
