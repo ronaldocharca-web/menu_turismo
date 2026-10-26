@@ -120,3 +120,63 @@
   .access-admin-content{width:min(100% - 24px,1180px);padding:28px 0 50px}
   .access-admin-content .admin-title-row h1{font-size:29px}
 }
+
+/* Cabecera móvil: el acceso nunca debe desaparecer fuera de la pantalla. */
+@media(max-width:720px){
+  .topbar{
+    position:relative!important;
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-areas:"brand access" "institution institution";
+    height:auto!important;
+    min-height:158px!important;
+    padding:12px 14px 10px!important;
+    gap:8px 10px!important;
+    overflow:visible!important;
+  }
+  .topbar>.brand{
+    grid-area:brand;
+    margin:0!important;
+    min-width:0;
+    font-size:18px!important;
+    white-space:nowrap;
+  }
+  .topbar>.brand .brand-mark{width:38px!important;height:38px!important;flex:none}
+  .topbar>.logo-left{
+    grid-area:institution;
+    width:min(72vw,280px)!important;
+    height:78px!important;
+    margin:0!important;
+    justify-self:start;
+  }
+  .topbar>.logo-right{
+    display:block!important;
+    position:absolute;
+    right:14px;
+    bottom:10px;
+    width:66px!important;
+    height:66px!important;
+    margin:0!important;
+  }
+  .topbar .top-actions{
+    grid-area:access;
+    display:flex!important;
+    margin:0!important;
+    gap:7px!important;
+    justify-self:end;
+    align-items:center;
+  }
+  .topbar .top-actions .login-entry{
+    display:grid!important;
+    place-items:center;
+    width:46px;
+    height:46px;
+    min-width:46px;
+    padding:0!important;
+    border-radius:12px!important;
+    font-size:0!important;
+  }
+  .topbar .top-actions .login-entry svg{width:22px;height:22px}
+  .topbar .top-actions .avatar,.topbar .top-actions .user-copy{display:none!important}
+  .layout{min-height:calc(100vh - 158px)!important}
+}
